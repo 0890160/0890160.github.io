@@ -1,0 +1,280 @@
+/* Achtergrond */
+.wall-left,
+.wall-right {
+	position: absolute;
+	width: 400px;
+	height: 1000px;
+	top: 0px;
+	background-size: cover;
+	opacity: 0.3;
+	z-index: 0;
+}
+
+.wall-left{
+	left: 0px;
+	background-image: url(../img/hercules-03.png);
+	background-position: left top;	
+}
+
+.wall-right{
+	right: 0px;	
+	background-image: url(../img/hercules-04.png);
+	background-position: right top;	
+}
+
+.trailer{
+	position: relative;
+	margin: 0 auto;
+	z-index: 10;
+	left: 50%;
+	margin-left: -475px;
+	margin-top: 150px;
+}
+
+.movie-info{
+	position: relative;
+	width: 800px;
+	min-height: 550px;
+	padding-bottom: 50px;
+	margin: 0 auto;
+	margin-top: 110px;
+	background-color: rgba(15,15,12,0.75);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	overflow: hidden;
+	z-index: 5;
+}
+
+.movie-info::after {
+	position: absolute;
+	content: "";
+	background-image: url(../img/hercules-05.png);
+	background-position: center top;	
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0.15;
+	top: 0; left: 0; bottom: 0; right: 0;
+	z-index: -1;   
+}
+
+/* Zorg dat IMDB-plugin er normaal uit ziet */
+.imdbRatingPlugin{
+	margin: 0 !important;
+	padding: 0px;
+}
+
+.ofTen{
+	visibility: hidden;
+	display: none;
+}
+
+/* Opmaak filmdetails en poster */
+.movie-poster,
+.movie-poster-img,
+.movie-poster-overlay{
+	position: absolute;
+	width: 300px;
+	height: 445px;
+	border-radius: 6px;
+	z-index: 10;
+	-webkit-transition-duration: 200ms;
+       -moz-transition-duration: 200ms;
+         -o-transition-duration: 200ms;
+   		    transition-duration: 200ms;
+}
+
+.movie-poster{
+	margin-left: 50px;
+	margin-top: 50px;
+	overflow: hidden;
+	box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+}
+
+.movie-poster-overlay{
+	background-color: rgba(243,134,76,0.8);
+	z-index: 50;
+	opacity: 0;
+}
+
+.zoom-icon{
+	position: absolute;
+	margin-left: 110px;
+	margin-top: 160px;
+	opacity: 0.8;
+}
+
+.kijkwijzer-icons{
+	position: relative;
+	margin: 0 auto;
+	top: 380px;
+	width: 180px;
+	opacity: 0.75;
+}
+
+.kijkwijzer-icons img{
+	margin-left: 5px;
+	margin-right: 5px;
+	float: left;
+}
+
+.movie-poster-img{
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+}
+
+.movie-poster:hover .movie-poster-overlay{
+	opacity: 1;
+}
+
+.movie-poster:hover{
+	box-shadow: none;
+}
+
+.movie-title{
+	width: 350px;
+	margin-left: 393px;
+	margin-top: 62px;
+	padding-bottom: 16px;
+	padding-left: 5px;
+	border-bottom: 2px solid rgba(255,255,255,0.1);	
+}
+
+.movie-details{
+	position: absolute;
+	width: 350px;
+	margin: 0 auto;
+	margin-top: -24px;
+	right: 50px;
+	background-color: rgba(255,255,255,0.0);
+	padding: 0px;
+	list-style: none;
+}
+
+.movie-details li,
+.movie-details li a,
+.imdbRatingPlugin span,
+.movie-speeltijden tr{
+	line-height: 33px;
+	font-family: "Roboto", sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	color: rgba(255,255,255,0.8);
+	text-align: left;
+	text-decoration: none;
+}
+
+.movie-details li:nth-child(odd),
+.movie-speeltijden thead th{
+	font-weight: 300;
+	color: rgba(255,255,255,0.65);
+}
+
+.movie-details li:nth-child(even){
+	margin-top: -33px;
+	margin-left: 130px;
+	font-weight: 400;
+}
+
+.movie-details li a:hover,
+.imdbRatingPlugin span:hover{
+	color: rgba(255,255,255,1);	
+}
+
+.movie-actors{
+	width: 365px;
+	height: 75px;
+	margin: 0 auto;
+	padding: 0px;
+	margin-left: 400px;
+	margin-top: 293px;
+}
+
+.movie-actor{
+	width: 75px;
+	height: 75px;
+	margin-right: 15px;
+	float: left;
+}
+
+.movie-actor a{
+	width: 75px;
+	height: 75px;
+	display: block;
+	text-indent:-9999px;
+	border-radius: 12px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.65;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition-duration: 50ms;
+       -moz-transition-duration: 50ms;
+         -o-transition-duration: 50ms;
+   		    transition-duration: 50ms;
+}
+
+.movie-actor a:hover{
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
+.movie-description{
+	width: 700px;
+	margin-left: 50px;
+	margin-top: 50px;
+	text-align: justify;
+	line-height: 22px;
+	color: rgba(255,255,255,0.7);
+	font-weight: 300;
+	font-style: italic;
+	letter-spacing: 1px;
+}
+
+.movie-speeltijden{
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 35px;
+	text-align: left;
+}
+
+.movie-speeltijden td{
+	line-height: 33px;
+	border-spacing: 10px;
+	padding-left: 10px;
+}
+
+.movie-speeltijden thead th{
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgba(255,255,255,0.1);
+	padding-left: 10px;
+}
+
+.movie-speeltijden tr:nth-child(1) td{
+	padding-top: 5px;
+}
+
+.movie-speeltijden tr:nth-child(even){
+	background-color: rgba(255,255,255,0.075);
+}
+
+/* Afbeeldingen acteurs */
+.djohnson a{
+	background-image: url(../img/actors/djohnson.jpg);
+}
+
+.imcshane a{
+	background-image: url(../img/actors/imcshane.jpg);
+}
+
+.jhurt a{
+	background-image: url(../img/actors/jhurt.jpg);
+}
+
+.rsewell a{
+	background-image: url(../img/actors/rsewell.jpg);
+}
