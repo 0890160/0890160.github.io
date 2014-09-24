@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contactformulier</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="contactformuliercss.css">
+<link type="text/javascript" src="contactformulier.js">
+</head>
+<body>
+	<img id="logofilmpje" src="logofilmpje.png"/>
+	<section class="container">
+		<h2>Contact informatie</h2>
+		<h3>Filmpje</h3>
+		<img alt=Bioscoop src="https://scontent-b.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/p526x296/10408186_982827925076333_8602377314083905655_n.jpg?oh=7d70b0695e5739c726bff1acfc758787&oe=54C56474" width=500 height=300>
+		<p>West-Kruiskade 26<BR>3014 AS Rotterdam, Nederland</p>
+		<p>Telephone: +006456746</p>
+		<p>Email: <a href="mailto:filmpje@hotmail.com">filmpje@hotmail.com</a></p>
+		<h2>Locations</h2>
+		<div id="map-canvas"></div>
+		<p class="adresrotterdam">	Filmpje Rotterdam <br>
+									West-Kruiskade 26<br>
+									3014 AS  Rotterdam<br><p>
+		<h2>General Information</h2>
+		<h3>Openingstijden</h3>
+		<p>Maandag t/m Zondag van 13:00 - 23:00</p>
+		<h1>Informatie Over Filmpje</h1>	
+		<p class="bioscoopketen"><strong>"Filmpje is een oer-Hollandse bioscoopketen"<br> Waar naar de film gaan een filmbeleving wordt en 
+		waarbij loungen het trefwoord is.</strong><p>
+		<div class="tekstoverons">
+			<p class="tekstoverons">Op dit moment is er een bioscoop in Rotterdam, maar waarschijnlijk komen er ook bioscopen in andere grote steden zoals Amsterdam, Utrecht en Den Haag. De bioscoop heeft de nieuwste technologie&#235;n op het gebied van geluid en beeld, zoals: Auro3D- gecertificeerde cinemageluidsinstallatie, IMAX 3D- digital gecertificeerde visuele projectoren en super comfortabele (VIP)zitplaatsen met voldoende been- en tussenruimte.
+		</div>
+		<br><br><p>Filmpje West-Kruiskade 26, 3014 AS in Rotterdam.
+		Deze bioscoop beschikt over:<p>
+		<ul>
+			<li>een bar
+			<li>een loungegedeelte (waar bezoekers kunnen wachten) 
+		</ul>
+		<ul><p>en drie bioscoopzalen met:<p>
+			<li>150 zitplaatsen</li>
+			<li>300 zitplaatsen</li>
+			<li>500 zitplaatsen</li>
+		</ul>
+			</p>
+
+	</section>
+	 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=eng"></script>
+    <script>
+		function initialize() {
+		var mapOptions = {	
+			zoom: 18,
+			center: new google.maps.LatLng(51.920553, 4.469767)
+			};
+			var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+			}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+	
+	<div>
+		<span id="foutmelding" style="color:red;"></span>
+		<span id="goedmelding" style="color:green;"></span>
+	</div>
+	<!--<div class="border">
+	<img class="logo" src="logo.png"/>	
+	</div> -->
+	<section class="contact">
+		<strong><p class="spoedig">Vul hier uw gegevens in om contact met ons op te nemen, wij zullen zo spoedig mogelijk reageren!</p></strong>
+		<form action="mailto:bioscoopfilmpje@outlook.com" method="post" enctype="text/plain">	
+			<input id="voornaam" type="text" placeholder="Voornaam" required></input><br>
+			<input id="achternaam" type="text" placeholder="Achternaam" required></input><br>
+			<input id="email" type="email" placeholder="E-mail Adress" required="required"></input><br>
+			<input id="telefoonnummer" type="text" placeholder="Telefoonnummer" pattern="[0-9]{10}"></input><br>
+			<textarea id="opmerking" type="text" placeholder="Opmerking"; rows="10"; style="width:500px"; required></textarea><br>
+			<input class="verstuur" type="submit" value="Verstuur">
+			<input class="verstuur" type="reset" name="reset" value="Wis alles">
+			
+		</form>
+	</section>
+</body>
+</html>

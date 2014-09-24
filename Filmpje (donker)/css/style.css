@@ -1,0 +1,175 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:900,400,700,400italic,900italic,700italic,500italic,300italic,500,300,100,100italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+
+body{ 
+	margin:0;
+	padding:0;
+	font-family: "Roboto", serif;
+	background: black;
+	font-weight: normal;
+	font-size: 15px;
+	color: white;
+}
+
+.se-container{
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+.se-slope{
+	margin: 0 -50px;
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-o-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.se-slope:nth-child(odd){
+	margin-top: -70px;
+	background-image: url(../img/stoelen.jpg);
+	background-size: cover;
+	background-position: center center;
+	padding: 180px 50px 140px 50px; /* Top - Right - Bottom - Left */
+}
+
+.se-slope:nth-child(even){
+	background: black;
+	-webkit-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
+	transform: rotate(-5deg);
+}
+
+.se-slope:nth-child(even) .se-content{
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	transform: rotate(5deg);
+	padding: 250px 100px 250px 100px;
+}
+
+.background-actie{
+	height: 500px;
+	width: 100%;
+	background-image: url(../img/lobby-02.png);	
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	margin-top: -500px;
+	opacity: 0.15;
+}
+
+.new-movies{
+	height: 400px;
+	background-color: rgba(255,255,255,0.3);
+	font-weight: normal;
+}
+
+.new-movies h2{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 16pt;	
+}
+
+.new-movies a{
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	font-size: 12pt;
+	opacity: 0.6;
+	color: white;
+	text-decoration: none;
+}
+
+/* MAARTEN */
+.menu{
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	position: fixed;
+	z-index: 1000;
+}
+
+.menu ul {
+	width: 512px;
+	margin: 0 auto;
+	list-style: none;
+}
+
+.menu ul li {
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.menu ul li,
+.menu ul li a,
+.menu ul li a:active{
+	color: rgba(255,255,255,0.6);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 13pt;
+	font-family: "Roboto Slab", serif;
+}
+
+.menu ul li a:hover {
+	color: white;	
+}
+
+.current{
+	border-bottom: 2px solid rgba(255,255,255,0.3);
+	padding-bottom: 4px;
+	padding-right: 0px;
+	padding-left: 4px;
+}
+
+.current:hover,
+.current:hover .menu ul li a {
+	color: rgba(255,255,255,0.7) !important;
+	border-bottom: 2px solid rgba(255,255,255,0.4);	
+}
+
+.logo{
+	position: relative;
+	margin: 0 auto;
+	opacity: 0.8;
+	height: 450px;
+	width: 450px;
+	left: 50%;
+	margin-left: -225px; 
+}
+
+/* Media Queries
+@media screen and (max-width: 1010px){
+	.se-content h3{
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.se-content h3{
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.se-content h3{
+		font-size: 20px;
+		line-height: 20px;
+		padding-top: 30px;
+		height: 60px;
+	}
+	.se-content p{
+		width: 95%;
+	}
+	.se-slope:nth-child(odd) .se-content,
+	.se-slope:nth-child(even) .se-content{
+		padding-left:60px;
+		padding-right:60px;
+		
+	}
+}
+ */
